@@ -9,6 +9,6 @@ namespace Book.Core.Entities
     public class Category:BaseEntity
     {
         public string Name { get; set; }
-        public List<Book> Books { get; set; }
+        public List<Books> Books { get; set; }
     }
 }

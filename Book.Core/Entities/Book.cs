@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Book.Core.Entities
 {
-    public class Book:BaseEntity
+    public class Books:BaseEntity
     {
         public string Name { get; set; }
         public double Price { get; set; }
