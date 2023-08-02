@@ -10,4 +10,9 @@
     <ProjectReference Include="..\Book.Data\Book.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dtos\Books\" />
+    <Folder Include="Dtos\Accounts\" />
+  </ItemGroup>
+
 </Project>
