@@ -1,4 +1,4 @@
-﻿namespace WebApplication1.Service.Dtos.Categories
+﻿namespace Book.Service.Dtos.Categories
 {
     public record CategoryGetDto
     {

@@ -1,5 +1,7 @@
 ﻿
 using Book.Core.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Book.Data.Contexts
 {
-    public class BookDbContext : DbContext
+    public class BookDbContext : IdentityDbContext<IdentityUser>
     {
         public DbSet<Category> Categories { get; set; }
       public DbSet<Books> Books { get; set; }

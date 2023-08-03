@@ -1,4 +1,4 @@
-﻿namespace WebApplication1.Service.Responses
+﻿namespace Book.Service.Responses
 {
     public class ApiResponse
     {

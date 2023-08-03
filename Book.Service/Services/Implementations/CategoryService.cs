@@ -54,7 +54,7 @@ namespace Book.Service.Services.Implementations
         {
             IQueryable<Category> query = await _repository.GetAllAsync(x => !x.IsDeleted);
             List<CategoryGetDto> categories = new List<CategoryGetDto>();
-            categories = await query.Select(x => new CategoryGetDto { Name = x.Name }).ToListAsync();
+            categories = await query.Select(x => new CategoryGetDto { Name = x.Name,Id=x.Id }).ToListAsync();
 
             return new ApiResponse { StatusCode = 200, items = categories };
         }

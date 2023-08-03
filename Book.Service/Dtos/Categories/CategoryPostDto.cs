@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication1.Service.Dtos.Categories
+namespace Book.Service.Dtos.Categories
 {
     public record CategoryPostDto
     {
