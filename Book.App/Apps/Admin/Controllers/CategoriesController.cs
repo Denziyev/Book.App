@@ -9,7 +9,7 @@ using System.Data;
 namespace Book.App.Apps.Admin.Controllers
 {
     [Route("api/admin/[controller]/[action]")]
-    [Authorize(Roles = "Admin,SuperAdmin")]
+    //[Authorize(Roles = "Admin,SuperAdmin")]
     [ApiController]
     public class CategoriesController : ControllerBase
     {

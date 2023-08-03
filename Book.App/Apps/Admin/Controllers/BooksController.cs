@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Book.App.Apps.Admin.Controllers
 {
     [Route("api/admin/[controller]/[action]")]
-    [Authorize(Roles ="Admin,SuperAdmin")]
+    //[Authorize(Roles ="Admin,SuperAdmin")]
     [ApiController]
     public class BooksController : ControllerBase
     {
@@ -40,14 +40,14 @@ namespace Book.App.Apps.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromForm] BookPostDto dto)
+        public async Task<IActionResult> Create([FromBody] BookPostDto dto)
         {
             var result = await _BookService.CreateAsync(dto);
             return StatusCode(result.StatusCode, result);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromForm] BookUpdateDto dto)
+        public async Task<IActionResult> Update(int id, [FromBody] BookUpdateDto dto)
         {
             var result = await _BookService.UpdateAsync(id, dto);
             return StatusCode(result.StatusCode, result);

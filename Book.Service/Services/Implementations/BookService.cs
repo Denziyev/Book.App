@@ -100,7 +100,8 @@ namespace Book.Service.Services.Implementations
             Book.Price = dto.Price;
             Book.UpdatedAt = DateTime.Now;
             Book.CategoryId = dto.CategoryId;
-            Book.Image = dto.File == null ? Book.Image : dto.File.CreateImage(_env.WebRootPath, "/assets/images/");
+            Book.Image = dto.File == null ? Book.Image : dto.File.CreateImage(_env.WebRootPath, $"assets/images/");
+            Book.ImageURL = _contextAccessor.HttpContext.Request.Scheme + "://" + _contextAccessor.HttpContext.Request.Host + $"/assets/images/{Book.Image}";
 
             await _repository.Update(Book);
             await _repository.SaveAsync();
